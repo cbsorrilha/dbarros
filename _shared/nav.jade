@@ -1,0 +1,19 @@
+
+nav.navbar.text-center
+    header.header(style="padding-top: 20px;")
+        div.center-block(style="border: solid white thick; max-width: 75%; border-radius:100%;")
+            a(href="/")
+                span(style="font-size: 98px;")
+                    |dB
+        
+        div
+            h3 dBarros
+                small  Front-end e etc...
+    
+    
+    div
+        nav.nav-collapse
+            ul.nav(role="navigation")
+                each pageData, pageName in public._data
+                    li
+                        a(href="/#{ pageName }") #{ pageData.name }
