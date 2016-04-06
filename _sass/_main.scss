@@ -5,6 +5,11 @@ $hover-link: #DDD;
 $green-hover-link: #375F2B;
 $lighter-green-hover-link: #143C09;
 
+html, body {
+  height: 100%;
+  background-color: $background-white;
+  font-family: 'Montserrat', 'Verdana', sans-serif;
+}
 
 input {
    outline:none;
@@ -30,10 +35,7 @@ button:hover {
   outline: 0px !important;
   -webkit-appearance: none;
 }
-html, body {
-  height: 100%;
-  background-color: $background-white;
-}
+
 
 
 
@@ -140,7 +142,7 @@ html, body {
   }
 }
 .banner {
-    font-family: 'Montserrat', 'Verdana' sans-serif;
+
     max-width: 100%;
     max-height: 45%;
     overflow: hidden;
@@ -149,7 +151,7 @@ html, body {
     background-position: center center;
 
     .call-to-action {
-
+        font-family: 'Montserrat', 'Verdana', sans-serif;
         color: white;
         position: absolute;
         width: 100%;
@@ -159,6 +161,7 @@ html, body {
 
     img {
         width: 100%;
+        max-height: 100%;
     }
 
 }
