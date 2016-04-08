@@ -151,11 +151,15 @@ button:hover {
     position:absolute;
     .call-to-action {
         font-family: 'Montserrat', 'Verdana', sans-serif;
+
         color: white;
         position: absolute;
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
+        h1 {
+            font-size: 3rem;
+        }
     }
 }
 .banner-wrapper {
