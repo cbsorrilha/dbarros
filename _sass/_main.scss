@@ -1,26 +1,25 @@
-$background-white: #EFEFEF;
-$background-black: #222;
-$link-color: #EEE;
-$hover-link: #DDD;
-$green-hover-link: #375F2B;
-$lighter-green-hover-link: #143C09;
-
 html, body {
-  height: 100%;
-  background-color: $background-white;
-  font-family: 'Montserrat', 'Verdana', sans-serif;
+    height: 100%;
+    background-color: $background-white;
+    font-family: $base-font-family;
 }
 
 input {
-   outline:none;
+    outline:none;
 }
-a, a:visited  {
-  color: $link-color;
-  text-decoration: none;
-}
-a:hover {
-  color: $hover-link;
-  text-decoration: none;
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:visited  {
+        color: $link-color;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $hover-link;
+        text-decoration: none;
+    }
 }
 
 textarea:hover,
@@ -32,152 +31,156 @@ input:focus,
 button:focus,
 button:active,
 button:hover {
-  outline: 0px !important;
-  -webkit-appearance: none;
+    outline: 0px !important;
+    -webkit-appearance: none;
 }
 
 
 
 
 .social {
-  background-color: black;
-  padding: 3px 10px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  a {
-    color: $link-color;
-  }
-  a:hover {
-    color: $lighter-green-hover-link;
-    text-decoration: none;
-  }
-}
-.social:hover {
-  opacity: 1.0;
-  filter: alpha(opacity=100);
-}
-
-.relative-parent {
-
-  position: relative;
-  .social {
+    /*Styling*/
+    background-color: black;
+    padding: 3px 10px;
+    @include border-radius(20px);
+    @include opacity(0.4);
+    /*Positioning*/
     max-width: 150px;
     position: fixed;
     right: 35px;
     top: 35px;
     z-index: 9999;
-    a{
-      display: inline-block;
-      margin: 0 7px;
+    &:hover {
+        @include opacity(1.0);
     }
-  }
-  .menu-btn{
-    position: fixed;
-    left: 25px;
-    top: 25px;
-    width: 60px;
-    height: 60px;
-    padding: 0;
-    text-align:center;
-    color: $link-color;
-    background-color: black;
-    font-weight: bold;
-    border: none;
-  }
-  .open-menu-btn {
-    z-index: 11;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-  .open-menu-btn:hover {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      color: $green-hover-link;
-  }
-  .close-menu-btn {
-    z-index: 9999;
-    font-size: 3.7rem;
-    border: none;
-    background-color: transparent;
-  }
+    a {
+        display: inline-block;
+        margin: 0 7px;
+        color: $link-color;
+        &:hover {
+            color: $lighter-green-hover-link;
+        }
+    }
+}
+
+
+.relative-parent {
+
+    position: relative;
+
+    .menu-btn{
+
+        text-align:center;
+        color: $link-color;
+        background-color: black;
+        font-weight: bold;
+        border: none;
+
+        position: fixed;
+        left: 25px;
+        top: 25px;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+
+    }
+    .open-menu-btn {
+        @include opacity(0.5);
+
+        z-index: 11;
+        &:hover {
+            @include opacity(1.0);
+            color: $green-hover-link;
+        }
+    }
+    .close-menu-btn {
+        font-size: 3.7rem;
+        border: none;
+        background-color: transparent;
+
+        z-index: 9999;
+
+    }
 }
 
 .hidden-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-  z-index: 9999;
+    background-color: black;
+    @include opacity(0.8);
 
-  .button-panel {
-    margin: 120px auto;
-    width: 75%;
-    color: $link-color;
-    background-color: trasparent;
-    padding: 10px;
-
-
-    button {
-      display:block;
-      background-color: #000;
-      opacity: inherit;
-      border: none;
-      width: 100%;
-      min-height: 50px;;
-      margin: 0 auto;
-    }
-
-    button:hover {
-      background-color: $lighter-green-hover-link;
-      filter: alpha(opacity=100);
-      opacity: 1;
-    }
-  }
-}
-.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
-    background-color:#005f97;
-    background-size: cover;
-    background-image: url(/img/skies.jpg);
-    background-position: center center;
-    width:100%;
-    position:absolute;
-    .call-to-action {
-        font-family: 'Montserrat', 'Verdana', sans-serif;
+    width: 100%;
+    z-index: 9999;
 
-        color: white;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        h1 {
-            font-size: 3rem;
+    .button-panel {
+        color: $link-color;
+        background-color: transparent;
+        padding: 10px;
+
+        margin: 120px auto;
+        width: 75%;
+
+        button {
+            opacity: inherit;
+            border: none;
+            background-color: #000;
+
+            display:block;
+            width: 100%;
+            min-height: 50px;;
+            margin: 0 auto;
+
+            &:hover {
+                background-color: $lighter-green-hover-link;
+                @include opacity(1.0);
+            }
         }
+
     }
 }
 .banner-wrapper {
     height: 100vh;
 }
 
-.content {
-  font-size: 1.7rem;
-  background-color: #EDEDED;
+.banner {
+    background-size: cover;
+    background-image: url(/img/skies.jpg);
+    background-position: center center;
 
-  .spacer {
-    margin-top: 75px;
-    padding: 10px;
-  }
-  img {
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+    height: 100%;
+    width:100%;
+    position:absolute;
+
+    .call-to-action {
+        color: white;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        h1 {
+            font-size: 5rem;
+        }
+        .quote-author {
+            text-shadow: 0px 0px 1px #DEDEDE;
+        }
+    }
+}
+
+
+.content {
+    font-size: 1.7rem;
+    background-color: #EDEDED;
+
+    .spacer {
+        margin-top: 75px;
+        padding: 10px;
+    }
+    img {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
 }
 .custom-btn {
     text-align:center;
@@ -187,5 +190,5 @@ button:hover {
     border: white thin solid;
 }
 .custom-btn:hover {
-   color: $lighter-green-hover-link;
+    color: $lighter-green-hover-link;
 }

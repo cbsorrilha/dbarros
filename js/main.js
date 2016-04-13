@@ -9,6 +9,7 @@ function ElMapper() {
     Mapper.quote = $('#quote');
     Mapper.quoteAuthor = $('#quote-author');
 }
+
 function HiddenNShowController() {
     "use strict";
     var Cont = this;
@@ -82,7 +83,7 @@ function QuoteGenerator() {
         $.when({}).then(app.getQuote).then(app.generate);
     };
     app.generate = function () {
-        var position = Math.floor(Math.random() * (app.quotesData.length - 1)),
+        var position = Math.floor(Math.random() * app.quotesData.length),
             quote = app.quotesData[position];
 
         app.mapper.quote.html(quote.text);
