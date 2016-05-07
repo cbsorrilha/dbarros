@@ -111,6 +111,6 @@ $(document).ready(function () {
         QGenerator = new QuoteGenerator();
 
     Binder.bind();
-    QGenerator.init();
+    // QGenerator.init();
 
 });

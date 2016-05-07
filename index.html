@@ -2,32 +2,10 @@
 layout: default
 ---
 
-<div class="banner-wrapper">
-    <div class="banner">
-      <div class="call-to-action">
-          <h1 class="text-center">
-              &#8220;<span id="quote">Hello World!</span>&#8221;<br> - <small class="quote-author" id="quote-author">Eu.</small>
-          </h1>
-      </div>
-    </div>
-</div>
+{% include banner.html %}
+
 <div class="content container-fluid">
-    <div class="row content" id="about">
-
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0">
-
-            <div class="spacer">
-                <h2>About the man</h2>
-                <p>
-                    I'm <strong>Cesar de Barros</strong>. Brazilian developer in love with technology and opensource stuff. Work with web standards, PHP, JS and maybe a bit of Python. Love to learn, pratice and be productive. <em>Also a general nerd</em>.
-                </p>
-            </div>
-
-        </div>
-        <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-3  col-md-offset-1 text-center">
-            <img style="border: solid #FFF thick" src="https://media.licdn.com/media/AAEAAQAAAAAAAAa1AAAAJDdlMjE2NjE3LTc4MjMtNGVjMS04ZWYxLTAwM2Q2MzUyZDk4Nw.jpg" class="img-circle img-responsive">
-        </div>
-    </div>
+    {% include about.html %}
     <div class="row" id="portfolio">
         <div class="col-xs-12">
             <div class="spacer">

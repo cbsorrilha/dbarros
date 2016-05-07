@@ -1,0 +1,28 @@
+<div class="row content content-group" id="about">
+
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-0">
+
+        <div class="spacer">
+            <h2>About the man</h2>
+            <p>
+                Eu sou <strong>Cesar de Barros</strong>. Desenvolvedor brasileiro apaixonado por tecnologia e coisas opensource. Trabalho com Web Standards, PHP, JS e talvez um pouquinho de Python ;). Adoro aprender, praticar e ser produtivo. <em>Faço coisas de nerd nas horas vagas</em>.
+            </p>
+        </div>
+
+    </div>
+    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-3  col-md-offset-1 text-center">
+        <img style="border: solid #FFF thick" src="https://media.licdn.com/media/AAEAAQAAAAAAAAa1AAAAJDdlMjE2NjE3LTc4MjMtNGVjMS04ZWYxLTAwM2Q2MzUyZDk4Nw.jpg" class="img-circle img-responsive">
+    </div>
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1" ng-controller="superpowersController">
+        <h3>Super Powers</h3>
+            <ul>
+                <li ng-repeat="power in powers">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="[[power.number]]" aria-valuemin="0" aria-valuemax="100" style="width: [[power.number]]%">
+                            [[power.name]]
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    </div>
+</div>

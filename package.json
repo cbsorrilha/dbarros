@@ -1,0 +1,23 @@
+{
+  "name": "dbarros",
+  "version": "1.0.0",
+  "description": "Site pessoal e blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbsorrilha/dbarros.git"
+  },
+  "keywords": [
+    "blog",
+    "pessoal"
+  ],
+  "author": "Cesar de Barros <cbsorrilha@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbsorrilha/dbarros/issues"
+  },
+  "homepage": "https://github.com/cbsorrilha/dbarros#readme"
+}
