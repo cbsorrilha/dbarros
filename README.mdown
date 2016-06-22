@@ -1,31 +1,4 @@
-W4R Site
+DBarros
 ========
 
-Site portfolio dos W4R Devs.
-
-Do que você vai precisar:
-
- - [jekyll](https://jekyllrb.com/docs/installation/) (precisa do [Ruby](https://nandovieira.com.br/configurando-ruby-rails-mysql-e-git-no-windows))
- - [sass](http://sass-lang.com/install) (precisa do [Ruby](https://nandovieira.com.br/configurando-ruby-rails-mysql-e-git-no-windows))
- - npm (precisa do [NodeJs](https://nodejs.org/en/download/))
- - [bower](https://bower.io/#install-bower) (precisa do [NodeJs](https://nodejs.org/en/download/))
- - [grunt](http://gruntjs.com/getting-started) (precisa do [NodeJs](https://nodejs.org/en/download/))
- - [BrowserSync](http://gruntjs.com/getting-started) (precisa do [NodeJs](https://nodejs.org/en/download/))
-
-
-Pra instalar (Depois de ter instalado NodeJs, Ruby e Jekyll):
-
-	$ npm install -g browser-sync
-    $ npm install -g bower
-    $ npm install -g grunt-cli
-    $ npm install
-
-Pra rodar
-
-	$ grunt serve
-
-Pra compilar
-
-	$ grunt
-
-Depois de compilado tudo vai ficar na pasta _site.
+Site portfolio pessoal.

@@ -1,7 +1,7 @@
 {
-  "name": "my-site-name",
-  "description": "My new Jekyll site.",
-  "version": "0.1.0",
+  "name": "dbarros-site",
+  "description": "Portfolio",
+  "version": "0.0.0",
   "devDependencies": {
     "bower": "^1.7.9",
     "grunt": "~0.4.5",
