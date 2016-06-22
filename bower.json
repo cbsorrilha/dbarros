@@ -1,0 +1,10 @@
+{
+  "name": "w4r-site",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass": "~3.0.0",
+    "modernizr": "~2.6.2",
+    "jquery": "2.2.4"
+  },
+  "private": true
+}
