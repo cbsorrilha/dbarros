@@ -18,14 +18,14 @@ module.exports = function (grunt) {
         	}
         },
         uglify: {
-        	vendor: {
-        		files: {
-        			'_site/js/vendor.min.js': [
-        				'bower_components/jquery/dist/jquery.js',
-        				'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
-        			]
-        		}
-        	},
+        	// vendor: {
+        	// 	files: {
+        	// 		'_site/js/vendor.min.js': [
+        	// 			'bower_components/jquery/dist/jquery.js',
+        	// 			'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
+        	// 		]
+        	// 	}
+        	// },
         	custom: {
         		files: {
         			'_site/js/custom.min.js': [
