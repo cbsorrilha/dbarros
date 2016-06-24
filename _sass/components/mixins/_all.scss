@@ -4,3 +4,8 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+@mixin opacity($radius) {
+    filter: alpha($radius * 100);
+    opacity: $radius;
+}
+

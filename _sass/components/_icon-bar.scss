@@ -1,4 +1,9 @@
 .icon-bar {
     background-color: #333;
-    @include border-radius(50%);
+    @include border-radius(100px);
+    @include opacity(0.4);
+    &:hover {
+        @include opacity(1);
+    }
+    
 }

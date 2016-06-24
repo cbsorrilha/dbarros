@@ -2,7 +2,23 @@
 @import "components/_icon-bar";
 
 header {
-	.social-container {
-		@extend .icon-bar;
-	}
+    .social-container {
+        position:fixed;
+        text-align: center;
+        width:100px;
+        top: 15px;
+        left: 10px;
+        @extend .icon-bar;
+        .social-icon {            
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            &:hover svg{
+                fill: $white;
+            }
+        }
+    }
+    .menu-container {
+
+    }
 }
