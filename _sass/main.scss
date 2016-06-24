@@ -1,7 +1,7 @@
 
 @charset "utf-8";
 
-
+$base-fontfamily: 'Raleway', sans-serif;
 
 
 // Use media queries like this:
@@ -22,6 +22,7 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 		// "bower_components/bootstrap-sass/assets/stylesheets/bootstrap",
+		"reset",
         "base",
         "layout"
         // "components/"
