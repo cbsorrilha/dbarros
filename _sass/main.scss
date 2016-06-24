@@ -22,6 +22,8 @@ $base-fontfamily: 'Raleway', sans-serif;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 		// "bower_components/bootstrap-sass/assets/stylesheets/bootstrap",
+		"components/mixins/all",
+		"components/all",
 		"reset",
         "base",
         "layout"

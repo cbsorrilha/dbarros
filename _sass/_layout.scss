@@ -1,4 +1,8 @@
 // DefaultPage Layout
+@import "components/_icon-bar";
+
 header {
-	@extend .header-component;
+	.social-container {
+		@extend .icon-bar;
+	}
 }
