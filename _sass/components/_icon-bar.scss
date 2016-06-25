@@ -1,5 +1,7 @@
 .icon-bar {
     background-color: #333;
+    color: $white;
+    text-align: center;
     @include border-radius(100px);
     @include opacity(0.4);
     &:hover {

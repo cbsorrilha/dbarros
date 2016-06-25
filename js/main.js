@@ -4,3 +4,8 @@ function escrevendoNoConsole(birrrl) {
 }
 
 escrevendoNoConsole("WELCOME TO THE RICE FIELDS");
+
+function isPalindrom(word) {
+	word = word.replace(/\^|~|\?|,|\*|\.|\-|\_/g, "").replace(" ", "");
+	return word == word.split("").reverse().join("");
+}
