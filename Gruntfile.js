@@ -17,6 +17,16 @@ module.exports = function (grunt) {
         		command: 'jekyll serve'
         	}
         },
+        browserify: {
+            dist: {
+                files: {
+                    'js/bundle.js': [
+                        'js/main.js',
+                        'js/modules/**/*.js'
+                    ]
+                }
+            }
+        },
         uglify: {
         	// vendor: {
         	// 	files: {
@@ -29,7 +39,7 @@ module.exports = function (grunt) {
         	custom: {
         		files: {
         			'_site/js/custom.min.js': [
-        				'js/main.js'
+        				'js/bundle.js'
         			]
         		}
         	}
@@ -40,8 +50,12 @@ module.exports = function (grunt) {
         		files: ['_sass/**/*.{scss, sass}'],
         		tasks: ['sass']
         	},
+            browserify: {
+                files: ['js/*.js', 'js/**/*.js', '!bundle.js'],
+                tasks: ['browserify']
+            },
         	uglify: {
-        		files: ['js/*.js'],
+        		files: ['js/bundle.js'],
         		tasks: ['uglify:custom']
         	}
         },
@@ -93,6 +107,7 @@ module.exports = function (grunt) {
         concurrent: {
         	serve: [
         		'sass:serve',
+                'browserify',
         		'uglify',
         		'watch',
         		'shell:jekyllServe'
@@ -112,6 +127,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
     	'shell:jekyllBuild',
     	'sass:build',
+        'browserify',
     	'uglify'
     ]);
 
