@@ -20,60 +20,60 @@ header {
             }
         }
     }
-    .menu-container {
-        position: fixed;
-        right: 15px;
-        top: 15px;
-        padding: 13px 15px;
-        font-weight: 600;
-        @extend .icon-bar;
-
-    }
-    .menu {
-        // display: none;
-        position:fixed;
-        left:0;
-        top:0;
-        background-color: #000;
-        @include opacity(0.4);
-        width: 100vw;
-        height: 100vh;
-        .menu-links {
-            width: 400px;
-            margin: 0 auto;
-            margin-top: 300px;
-            font-size: 38px;
-            li{
-                padding: 35px;
+    .menu-container {       
+        .menu-btn {
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            padding: 13px 15px;
+            font-weight: 600;
+            @extend .icon-bar;
+        }
+        .menu {
+            // display: none;
+            position:fixed;
+            left:0;
+            top:0;
+            background-color: #000;
+            @include opacity(0.4);
+            width: 100vw;
+            height: 100vh;
+            .menu-links {
+                width: 400px;
+                margin: 0 auto;
+                margin-top: 300px;
+                font-size: 38px;
+                li{
+                    padding: 35px;
+                }
+                li:hover {
+                    background-color: #333;
+                }
+                a{
+                    color: #FFF !important;
+                    text-decoration: none;
+                    text-align: center;
+                }
             }
-            li:hover {
-                background-color: #000;
-            }
-            a{
-                color: #FFF !important;
-                text-decoration: none;
-                text-align: center;
+            .close-btn {
+                width: 60px;
+                float: right;
+                margin-top: 15px;
+                margin-right: 45px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                .close-x {
+                    stroke: #FFF;
+                    fill: transparent;
+                    stroke-linecap: round;
+                    stroke-width: 5;
+                }
             }
         }
-        .close-btn {
-            width: 60px;
-            float: right;
-            margin-top: 15px;
-            margin-right: 45px;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            .close-x {
-                stroke: #FFF;
-                fill: transparent;
-                stroke-linecap: round;
-                stroke-width: 5;
-
-            }
-        }
-        
     }
+    
 }
 
 footer {
