@@ -9,13 +9,14 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        clean: ['_site'],
         shell: {
-        	jekyllBuild: {
-        		command: 'jekyll build'
-        	},
-        	jekyllServe: {
-        		command: 'jekyll serve'
-        	}
+            jekyllBuild: {
+                command: 'jekyll build'
+            },
+            jekyllServe: {
+                command: 'jekyll serve'
+            }
         },
         browserify: {
             dist: {
@@ -28,54 +29,54 @@ module.exports = function (grunt) {
             }
         },
         uglify: {
-        	// vendor: {
-        	// 	files: {
-        	// 		'_site/js/vendor.min.js': [
-        	// 			'bower_components/jquery/dist/jquery.js',
-        	// 			'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
-        	// 		]
-        	// 	}
-        	// },
-        	custom: {
-        		files: {
-        			'_site/js/custom.min.js': [
-        				'js/bundle.js'
-        			]
-        		}
-        	}
+            // vendor: {
+            //  files: {
+            //      '_site/js/vendor.min.js': [
+            //          'bower_components/jquery/dist/jquery.js',
+            //          'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
+            //      ]
+            //  }
+            // },
+            custom: {
+                files: {
+                    '_site/js/custom.min.js': [
+                        'js/bundle.js'
+                    ]
+                }
+            }
 
         },
         watch: {
-        	sass: {
-        		files: ['_sass/**/*.{scss, sass}'],
-        		tasks: ['sass']
-        	},
+            sass: {
+                files: ['_sass/**/*.{scss, sass}'],
+                tasks: ['sass']
+            },
             browserify: {
                 files: ['js/*.js', 'js/**/*.js', '!bundle.js'],
                 tasks: ['browserify']
             },
-        	uglify: {
-        		files: ['js/bundle.js'],
-        		tasks: ['uglify:custom']
-        	}
+            uglify: {
+                files: ['js/bundle.js'],
+                tasks: ['uglify:custom']
+            }
         },
         sass: {
-        	options: {
-        		sourceMap: true,
-        		relativeAssets: false,
-        		outputStyle: 'compressed',
-        		sassDir: '_sass',
-        		cssDir: '_site/css'
-        	},
-        	build: {
-        		files: [{
-        			expand:true,
-        			cwd: '_sass/',
-        			src: ['**/*.{scss,sass}'],
-        			dest: '_site/css',
-        			ext: '.css'
-        		}]
-        	},
+            options: {
+                sourceMap: true,
+                relativeAssets: false,
+                outputStyle: 'compressed',
+                sassDir: '_sass',
+                cssDir: '_site/css'
+            },
+            build: {
+                files: [{
+                    expand:true,
+                    cwd: '_sass/',
+                    src: ['**/*.{scss,sass}'],
+                    dest: '_site/css',
+                    ext: '.css'
+                }]
+            },
             serve: {
                 options: {
                     outputStyle: 'expanded',
@@ -105,30 +106,32 @@ module.exports = function (grunt) {
             }
         },
         concurrent: {
-        	serve: [
-        		'sass:serve',
+            serve: [
+                'sass:serve',
                 'browserify',
-        		'uglify',
-        		'watch',
-        		'shell:jekyllServe'
-        	],
-        	options: {
-        		logConcurrentOutput: true
-        	}
+                'uglify',
+                'watch',
+                'shell:jekyllServe'
+            ],
+            options: {
+                logConcurrentOutput: true
+            }
         }
         // This is where our tasks are defined and configured
     });
 
     grunt.registerTask('serve', [
-    	'browserSync',
-    	'concurrent:serve'
+        'clean',
+        'browserSync',
+        'concurrent:serve'
     ]);
 
     grunt.registerTask('build', [
-    	'shell:jekyllBuild',
-    	'sass:build',
+        'clean',
+        'shell:jekyllBuild',
+        'sass:build',
         'browserify',
-    	'uglify'
+        'uglify'
     ]);
 
     grunt.registerTask('default', 'build');
