@@ -34,8 +34,7 @@ header {
             position:fixed;
             left:0;
             top:0;
-            background-color: #000;
-            @include opacity(0.4);
+            background-color: rgba(0,0,0,0.4);
             width: 100vw;
             height: 100vh;
             .menu-links {
