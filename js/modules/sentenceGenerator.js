@@ -8,6 +8,5 @@ module.exports = function () {
         getRandomSentence: function () {
             return sentences[Math.floor(Math.random()*sentences.length)];
         }
-    }
-    
+    };
 }
