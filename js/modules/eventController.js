@@ -4,6 +4,8 @@ module.exports = function () {
 		menuController.init();
 	}
 	return {
-		init: loadEvents
+		init: function () {
+			loadEvents();
+		}
 	}
 }
