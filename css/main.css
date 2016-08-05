@@ -1,0 +1,146 @@
+.icon-bar, header .social-container, header .menu-container .menu-btn {
+  background-color: #333;
+  color: #FEFEFE;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-filter: opacity(40);
+          filter: opacity(40);
+  opacity: 0.4; }
+  .icon-bar:hover, header .social-container:hover, header .menu-container .menu-btn:hover {
+    -webkit-filter: opacity(100);
+            filter: opacity(100);
+    opacity: 1; }
+
+.main-banner {
+  height: 90vh;
+  background-color: #333;
+  background-image: url(/img/bg-work.jpg);
+  background-size: cover; }
+
+.opaque {
+  -webkit-filter: opacity(100);
+          filter: opacity(100);
+  opacity: 1; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600; }
+
+.page-content {
+  background-color: #333; }
+
+.icon-bar, header .social-container, header .menu-container .menu-btn {
+  background-color: #333;
+  color: #FEFEFE;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-filter: opacity(40);
+          filter: opacity(40);
+  opacity: 0.4; }
+  .icon-bar:hover, header .social-container:hover, header .menu-container .menu-btn:hover {
+    -webkit-filter: opacity(100);
+            filter: opacity(100);
+    opacity: 1; }
+
+header .social-container {
+  position: fixed;
+  width: 100px;
+  top: 15px;
+  left: 10px; }
+  header .social-container svg {
+    fill: #b2b2b2; }
+  header .social-container .social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block; }
+    header .social-container .social-icon:hover svg {
+      fill: #FEFEFE; }
+
+header .menu-container .menu-btn {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  padding: 13px 15px;
+  font-weight: 600; }
+
+header .menu-container .menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh; }
+  header .menu-container .menu .menu-links {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
+    font-size: 38px; }
+    header .menu-container .menu .menu-links li {
+      padding: 35px; }
+    header .menu-container .menu .menu-links li:hover {
+      background-color: rgba(33, 33, 33, 0.1); }
+    header .menu-container .menu .menu-links a {
+      color: #FFF !important;
+      text-decoration: none;
+      text-align: center; }
+  header .menu-container .menu .close-btn {
+    width: 60px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 45px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; }
+    header .menu-container .menu .close-btn .close-x {
+      stroke: #FFF;
+      fill: transparent;
+      stroke-linecap: round;
+      stroke-width: 5; }
+
+footer .footer-container {
+  text-align: center;
+  background-color: #333;
+  color: #FEFEFE;
+  font-size: 24px; }
+  footer .footer-container .copy {
+    padding: 20px; }

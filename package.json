@@ -1,22 +1,33 @@
 {
-  "name": "dbarros-site",
-  "description": "Portfolio",
+  "name": "browser-sync-jekyll",
   "version": "0.0.0",
-  "devDependencies": {
-    "bower": "^1.7.9",
-    "grunt": "~0.4.5",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-browserify": "^5.0.0",
-    "grunt-concurrent": "^2.3.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-sass": "^1.2.0",
-    "grunt-shell": "^1.1.2",
-    "load-grunt-tasks": "~0.6.0",
-    "time-grunt": "~0.4.0"
-  },
+  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "main": "gulpfile.js",
   "scripts": {
-    "postinstall": "bower install"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shane Osbourne",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "browserify": "^13.1.0",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-sass": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "bugs": {
+    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
+  },
+  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
 }

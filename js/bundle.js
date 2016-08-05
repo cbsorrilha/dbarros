@@ -12,7 +12,9 @@ module.exports = function () {
 		menuController.init();
 	}
 	return {
-		init: loadEvents
+		init: function () {
+			loadEvents();
+		}
 	}
 }
 },{"./menuController.js":3}],3:[function(require,module,exports){
@@ -52,4 +54,4 @@ module.exports = function () {
         }
     };
 }
-},{}]},{},[1,2,3,4]);
+},{}]},{},[1]);
