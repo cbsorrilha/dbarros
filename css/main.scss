@@ -1,146 +1,52 @@
-//colors
-$color_gallery_approx: #f0f0f0;
-$color_navbar_font: #FEFEFE;
-$color_navbar_bg: #444;
-$color_tundora_approx: #444;
-$cornflower_blue: cornflowerblue;
-$color_jordy_blue_approx: #92b4f2;
-$color_celeste_approx: #cfcfcf;
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
 
-//fonts
-$font_0: Avenir Next;
-$font_1: Trebuchet MS;
-$font_2: Helvetica;
-$font_3: Arial;
-$font_4: sans-serif;
-$font_5: Source Code Pro;
-$font_6: Menlo;
-$font_7: monospace;
 
-body {
-	font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
-	font-size: 1.25em;
-	background: $color_gallery_approx;
-	color: $color_tundora_approx;
-}
 
-.navbar {
-    padding: 20px;
-    border-radius: 0;
-    position:fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    color: $color_navbar_font;
-    background: $color_navbar_bg;
-    width:250px;
-    margin: 0;
-    a {
-        color:    $color_navbar_font;
-        font-size: 16px;
-        &:hover {
-            color: $color_navbar_bg;
-            text-decoration: none;
-        }
-        &:focus {
-            color: $color_navbar_bg;
-            text-decoration: none;
-        }
-        &:active {
-            color: $color_navbar_bg;
-            text-decoration: none;
-        }
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
     }
-    header{
-
-        a {
-
-            &:hover {
-                color: $color_navbar_font;
-                text-decoration: none;
-            }
-            &:focus {
-                color: $color_navbar_font;
-                text-decoration: none;
-            }
-            &:active {
-                color: $color_navbar_font;
-                text-decoration: none;
-            }
-
-        }
-
-
-    }
-
-
 }
 
 
 
-h1 {
-	font-size: 3em;
-	font-weight: 500;
-	line-height: 0.9;
-	+ p {
-		font-size: 1.33em;
-	}
-}
-ul {
-	padding-left: 0;
-	list-style: none;
-}
-ol {
-	padding-left: 0;
-}
-li {
-	list-style: none;
-}
-a {
-	color: $cornflower_blue;
-	&:hover {
-		color: $color_jordy_blue_approx;
-	}
-	&:focus {
-		color: $color_jordy_blue_approx;
-	}
-	&:active {
-		color: $color_jordy_blue_approx;
-	}
-}
-footer {
-	margin: 2em 0;
-}
-img {
-	width: 100%;
-}
-@media(min-width: 35em) {
-	img {
-		width: 120%;
-		margin-left: -10%;
-		margin-right: -10%;
-		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-		border-radius: 0.15em;
-	}
-}
-pre {
-	padding: 0.75em;
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0.15em;
-	background: $color_tundora_approx;
-	//Instead of the line below you could use @include word-break($value)
-	word-break: break-all;
-	word-wrap: break-word;
-	code {
-		color: $color_celeste_approx;
-	}
-}
-code {
-	font-family: $font_5, $font_6, $font_7;
-	font-size: 90%;
-}
-nav a {
-	padding: 0.5em;
-	margin-left: -0.5em;
-	margin-right: 0.5em;
-}
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
