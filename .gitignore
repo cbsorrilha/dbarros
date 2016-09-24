@@ -1,1 +1,3 @@
-/www
+/node_modules
+/.sass-cache
+/_site
