@@ -49,24 +49,24 @@ gulp.task('css', () => {
     .pipe(gulp.dest('assets'))
 });
 
-gulp.task('browserify', function () {
-  var browserified = transform(function(filename) {
-    var b = browserify(filename);
-    return b.bundle();
-  });
+// gulp.task('browserify', function () {
+//   var browserified = transform(function(filename) {
+//     var b = browserify(filename);
+//     return b.bundle();
+//   });
   
-  return gulp.src(['./js/app.js'])
-  	.pipe(through2.obj(function (file, enc, next){
-            browserify(file.path)
-                .bundle(function(err, res){
-                    // assumes file.contents is a Buffer
-                    file.contents = res;
-                    next(null, file);
-                });
-    }))
-    // .pipe(uglify())
-    .pipe(gulp.dest('./_site/js'));
-});
+//   return gulp.src(['./js/app.js'])
+//   	.pipe(through2.obj(function (file, enc, next){
+//             browserify(file.path)
+//                 .bundle(function(err, res){
+//                     // assumes file.contents is a Buffer
+//                     file.contents = res;
+//                     next(null, file);
+//                 });
+//     }))
+//     // .pipe(uglify())
+//     .pipe(gulp.dest('./_site/js'));
+// });
 
 gulp.task('serve', () => {
   browserSync.init({
@@ -77,8 +77,9 @@ gulp.task('serve', () => {
     }
   });
   gulp.watch(cssFiles, ['css']);
-  gulp.watch(jsFiles, ['browserify']);
+  // gulp.watch(jsFiles, ['browserify']);
   // watch();
 });
 
-gulp.task('default', ['css', 'browserify', 'jekyll', 'serve']);
+// gulp.task('default', ['css', 'browserify', 'jekyll', 'serve']);
+gulp.task('default', ['css', 'jekyll', 'serve']);
