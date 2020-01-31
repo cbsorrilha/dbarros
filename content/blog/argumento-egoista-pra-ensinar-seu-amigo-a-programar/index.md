@@ -51,7 +51,7 @@ Fora que esse cara que aprende hoje com você, pode estar contigo numa startup f
 
 ## Conclusão
 
-Ajude o Cleitinho a aprender a programar. Você não precisar virar professor. Dê a ele material, dicas. Se puder, compre livros pra ele. Indique cursos. Diga pra ele criar um LinkedIn. Isso vai fazer diferença na vida dele, e na sua também.
+Ajude o Cleitinho a aprender a programar. Você não precisa virar um professor. Dê a ele material, dicas. Se puder, compre livros pra ele. Indique cursos. Diga pra ele criar um LinkedIn. Isso vai fazer diferença na vida dele, e na sua também.
 
 
 ## Links úteis
