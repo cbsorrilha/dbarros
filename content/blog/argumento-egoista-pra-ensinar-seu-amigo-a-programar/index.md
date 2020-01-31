@@ -1,6 +1,6 @@
 ---
 title: Um argumento egoísta pra ensinar seu amigo a programar
-date: "2019-12-12T22:18:34.004Z"
+date: "2020-01-31T11:16:00.004Z"
 description: "O que você ganha por espalhar a \"palavra\"."
 ---
 
