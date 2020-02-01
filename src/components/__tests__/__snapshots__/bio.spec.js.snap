@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bio renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "marginBottom": "4.375rem",
+    }
+  }
+/>
+`;
