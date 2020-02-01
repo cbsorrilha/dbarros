@@ -29,7 +29,7 @@ Pelo menos nos países desenvolvidos.
 
 ## Desenvolvimento e a África
 
-Nos países subdesenvolvidos essa não é exatamente a realidade. Mas por que isso é importante pra você? Por que você milenial/gen-z ia querer dividir a sua fatia de desenvolvimento com a áfrica?
+Nos países subdesenvolvidos essa não é exatamente a realidade. Mas por que isso é importante pra você? Por que você millennial/gen-z ia querer dividir a sua fatia de desenvolvimento com a áfrica?
 
 Imagine que você tem um Brasileiro pesquisando a cura do câncer. Ele só consegue realizar uma quantidade de horas de pesquisa, uma quantidade de testes. Agora imagine se forem um Brasileiro e um Angolano trabalhando ao mesmo tempo em laboratórios diferentes? As chances são muito maiores, mesmo que eles só disponham de tentativa e erro.
 
