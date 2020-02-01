@@ -15,7 +15,7 @@ branches:
 
 deploy:
     provider: script
-    script: npm run build && firebase deploy
+    script: npm run build && firebase deploy --token "$FIREBASE_TOKEN"
     skip_cleanup: true
     on:
         branch: master  
