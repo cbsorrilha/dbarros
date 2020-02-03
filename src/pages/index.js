@@ -17,7 +17,6 @@ class BlogIndex extends React.Component {
           <meta name="robots" content="noindex" />
         </Helmet>
         <SEO title="Olá, eu sou o Cesar." />
-        <JumboTitle>Olá, eu sou o Cesar.</JumboTitle>
         <Bio />
       </Layout>
     )

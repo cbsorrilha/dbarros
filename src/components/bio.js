@@ -18,15 +18,19 @@ const BioCard = styled.div`
   grid-column: 2 / 14;
   background-color: #242629;
   display: flex;
+  margin-top: ${rhythm(2.5)};
+
+  ${media.phone(css`
+    flex-direction: column-reverse;
+    margin-top: 10%;
+  `)}
+
   > img {
     margin: 0;
     height: auto;
     width: 100%;
     max-width: ${rhythm(15)};
   }
-  ${media.phone(css`
-    flex-direction: column-reverse;
-  `)}
 `
 
 const Description = styled.div`
@@ -37,6 +41,11 @@ const Description = styled.div`
     color: #94a1b2;
     font-size: ${rhythm(0.55)};
     max-width: ${rhythm(22)};
+  }
+  > h2 {
+    color: #fffffe;
+    margin: 0;
+    margin-bottom: ${rhythm(1)};
   }
 `
 
@@ -86,6 +95,8 @@ const Bio = ({}) => {
     }
   `)
 
+  console.log("teste")
+
   const { profilePic, social } = data.site.siteMetadata
 
   const socialKeys = Object.keys(social)
@@ -93,6 +104,7 @@ const Bio = ({}) => {
   return (
     <BioCard>
       <Description>
+        <h2>Olá, eu sou o Cesar</h2>
         <p>
           Sou desenvolvedor web e meu sonho é transformar a Baixada Fluminense
           (RJ) no novo Vale do Silício&#8482;.
