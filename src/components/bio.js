@@ -28,6 +28,7 @@ const BioCard = styled.div`
   > img {
     margin: 0;
     height: auto;
+    max-height: ${rhythm(14.5)};
     width: 100%;
     max-width: ${rhythm(15)};
   }
@@ -40,7 +41,7 @@ const Description = styled.div`
     margin-bottom: ${rhythm(0.3)};
     color: #94a1b2;
     font-size: ${rhythm(0.55)};
-    max-width: ${rhythm(22)};
+    max-width: ${rhythm(23)};
   }
   > h2 {
     color: #fffffe;
@@ -95,8 +96,6 @@ const Bio = ({}) => {
     }
   `)
 
-  console.log("teste")
-
   const { profilePic, social } = data.site.siteMetadata
 
   const socialKeys = Object.keys(social)
@@ -106,7 +105,7 @@ const Bio = ({}) => {
       <Description>
         <h2>Olá, eu sou o Cesar</h2>
         <p>
-          Sou desenvolvedor web e meu sonho é transformar a Baixada Fluminense
+          Sou desenvolvedor web desde 2013 e meu sonho é transformar a Baixada Fluminense
           (RJ) no novo Vale do Silício&#8482;.
         </p>
         <p>

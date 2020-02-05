@@ -1,9 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import { Helmet } from "react-helmet"
+import BlogShelf from '../components/blog-shelf';
+import PageTitle from '../components/page-title';
+import BlogPost from '../components/blog-post';
+import placeholderImage from '../../content/assets/placeholder.png';
 
 class BlogIndex extends React.Component {
   render() {
@@ -17,32 +20,20 @@ class BlogIndex extends React.Component {
           <meta name="robots" content="noindex" />
         </Helmet>
         <SEO title="Todos os posts" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        <PageTitle>Todos os posts</PageTitle>
+        <BlogShelf>
+          {
+            posts.map(({ node }) => (
+              <BlogPost
+                key={node.fields.slug}
+                slug={node.fields.slug}
+                title={node.frontmatter.title || node.fields.slug}
+                date={node.frontmatter.date}
+                image={node.frontmatter.featuredImage || placeholderImage}
+                description={node.frontmatter.description || node.excerpt} />
+            ))
+          }
+        </BlogShelf>
       </Layout>
     )
   }
@@ -65,9 +56,10 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD/MM/YYYY")
             title
             description
+            featuredImage
           }
         }
       }

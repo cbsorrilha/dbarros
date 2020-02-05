@@ -2,6 +2,7 @@
 title: Um argumento egoísta pra ensinar seu amigo a programar
 date: "2020-01-31T11:16:00.004Z"
 description: "O que você ganha por espalhar a \"palavra\"."
+featuredImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLI0z9v6SACEUzCtM3VMPZVlkbuFwriDQ1xNysA-4sOIAs_uqr"
 ---
 
 ## Introdução

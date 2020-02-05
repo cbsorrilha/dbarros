@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import JumboTitle from "../components/jumbo-title"
 import Bio from "../components/bio"
 
 class BlogIndex extends React.Component {
