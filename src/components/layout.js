@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color: #16161A;
     padding-bottom: ${rhythm(4)};
+    color: #FFFFFE;
   }
 `
 

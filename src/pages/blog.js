@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -56,7 +56,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD/MM/YYYY")
+            date(formatString: "MMMM DD, YYYY", locale: "pt-BR")
             title
             description
             featuredImage

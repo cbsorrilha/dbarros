@@ -1,5 +1,7 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { rhythm } from "../utils/typography"
+import media from "../utils/media"
+
 
 export default styled.footer`
   position: fixed;
@@ -18,4 +20,12 @@ export default styled.footer`
   grid-column-gap: 0.75%;
   padding: 0;
   align-items: center;
+
+  ${media.phone(css`
+    height: 3rem;
+    font-size: 10px;
+    pre {
+      font-size: 10px;
+    }
+  `)}
 `

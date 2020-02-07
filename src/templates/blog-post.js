@@ -1,9 +1,49 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled, { css } from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import media from "../utils/media"
+
+const Article = styled.article`
+  grid-column: 2 / 14;
+  
+  section p {
+    color: #94A1B2;
+    font-size: ${rhythm(.666)};
+  }
+  a {
+    color: #2CB67D;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  ${media.phone(css`
+    h1 {
+      font-size: 1.8rem;
+    }
+  `)}
+`;
+
+const Nav = styled.nav`
+  grid-column: 2 / 14;
+`;
+
+const Date = styled.p`
+  display: block;
+  margin-bottom: ${rhythm(1)};
+  margin-top: ${rhythm(.35)};
+  color: #2CB67D;
+  font-weight: bold;
+  font-size: ${rhythm(.5)};
+`;
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -17,25 +57,14 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+        <Article>
           <header>
-            <h1
-              style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
-              }}
-            >
+            <h1>
               {post.frontmatter.title}
             </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
+            <Date>
               {post.frontmatter.date}
-            </p>
+            </Date>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
@@ -43,9 +72,9 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-        </article>
+        </Article>
 
-        <nav>
+        <Nav>
           <ul
             style={{
               display: `flex`,
@@ -70,7 +99,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
           </ul>
-        </nav>
+        </Nav>
       </Layout>
     )
   }

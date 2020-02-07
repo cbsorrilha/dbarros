@@ -47,7 +47,13 @@ const Description = styled.div`
     color: #fffffe;
     margin: 0;
     margin-bottom: ${rhythm(1)};
+    
   }
+  ${media.phone(css`
+    > h2 {
+      font-size: 1.4rem;
+    }
+  `)}
 `
 
 const Social = styled.div`
@@ -71,7 +77,7 @@ const SocialItem = styled.div`
   }
 `
 
-const Bio = ({}) => {
+const Bio = () => {
   const data = useStaticQuery(graphql`
     query {
       site {
