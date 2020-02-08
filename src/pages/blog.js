@@ -14,9 +14,6 @@ export default function Blog({ data, location }) {
 
   return (
     <Layout location={location} title={siteTitle}>
-        <Helmet>
-          <meta name="robots" content="noindex" />
-        </Helmet>
         <SEO title="Todos os posts" />
         <PageTitle>Todos os posts</PageTitle>
         <BlogShelf>
