@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled, { css } from "styled-components"
 
 import { rhythm } from "../utils/typography"
@@ -104,7 +104,7 @@ const Bio = () => {
 
   const { profilePic, social } = data.site.siteMetadata
 
-  const socialKeys = Object.keys(social)
+  const socialKeys = social ? Object.keys(social) : null;
 
   return (
     <BioCard>
@@ -122,7 +122,7 @@ const Bio = () => {
         <p>Também me meto escrever na internet.</p>
         <p>Quer saber mais? Fala comigo.</p>
         <Social>
-          {socialKeys.map(key => {
+          {socialKeys && socialKeys.map(key => {
             const Icon = iconDict[key]
             return (
               <SocialItem key={key}>

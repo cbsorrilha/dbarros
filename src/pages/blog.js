@@ -8,14 +8,12 @@ import PageTitle from '../components/page-title';
 import BlogPost from '../components/blog-post';
 import placeholderImage from '../../content/assets/placeholder.png';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+export default function Blog({ data, location }) {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allMarkdownRemark.edges
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
+  return (
+    <Layout location={location} title={siteTitle}>
         <Helmet>
           <meta name="robots" content="noindex" />
         </Helmet>
@@ -35,11 +33,8 @@ class BlogIndex extends React.Component {
           }
         </BlogShelf>
       </Layout>
-    )
-  }
+  )
 }
-
-export default BlogIndex
 
 export const pageQuery = graphql`
   query {

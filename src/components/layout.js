@@ -18,32 +18,26 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-class Layout extends React.Component {
-  render() {
-    const { children } = this.props
-
-    return (
-      <>
-        <GlobalStyle />
-        <Header>
-          <Logo />
-          <Links>
-            <Link activeClassName="active" to="/blog">
-              Blog
-            </Link>
-            <Link activeClassName="active" to="/">
-              Sobre
-            </Link>
-          </Links>
-        </Header>
-        <Main>{children}</Main>
-        <Footer>
-          <LoveToCode />
-          <Copy year={new Date().getFullYear()} />
-        </Footer>
-      </>
-    )
-  }
+export default function Layout({ children }) {
+  return (
+    <>
+      <GlobalStyle />
+      <Header>
+        <Logo />
+        <Links>
+          <Link activeClassName="active" to="/blog">
+            Blog
+          </Link>
+          <Link activeClassName="active" to="/">
+            Sobre
+          </Link>
+        </Links>
+      </Header>
+      <Main>{children}</Main>
+      <Footer>
+        <LoveToCode />
+        <Copy year={new Date().getFullYear()} />
+      </Footer>
+    </>
+  )
 }
-
-export default Layout

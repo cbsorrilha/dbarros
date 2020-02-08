@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing the BlogPostTemplate renders correctly 1`] = `
+Array [
+  <header
+    className="sc-AykKC fLWTSL"
+  >
+    <h1
+      className="sc-AykKE jhfoAy"
+    >
+      <a
+        className="sc-AykKD ipEYTO"
+        href="/"
+      >
+        <img
+          alt="dbarros logo"
+          src="test-file-stub"
+        />
+      </a>
+    </h1>
+    <nav
+      className="sc-fzXfLQ bimKsw"
+    >
+      <a
+        href="/blog"
+      >
+        Blog
+      </a>
+      <a
+        href="/"
+      >
+        Sobre
+      </a>
+    </nav>
+  </header>,
+  <main
+    className="sc-fzXfLR bMWpZY"
+  >
+    <article
+      className="sc-fzXfLS ZXqsk"
+    >
+      <header>
+        <h1>
+          Zimbabwe
+        </h1>
+        <p
+          className="sc-fzXfLU fyczql"
+        >
+          00/00/0000
+        </p>
+      </header>
+      <section
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<p>Loren</p>",
+          }
+        }
+      />
+      <hr />
+    </article>
+    <nav
+      className="sc-fzXfLT gKHxls"
+    >
+      <ul>
+        <li>
+          <a
+            href="bazzinga"
+            rel="prev"
+          >
+            ← 
+            bazzinga previous
+          </a>
+        </li>
+        <li>
+          <a
+            href="bazzinga"
+            rel="next"
+          >
+            bazzinga next
+             →
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>,
+  <footer
+    className="sc-AykKF gWljpi"
+  >
+    <div
+      className="sc-fzXfLO iqPeVM"
+    >
+      <pre>
+        <span
+          className="sc-AykKG fUcpJu"
+        >
+          if
+        </span>
+        <span
+          className="sc-AykKH bhSCBp"
+        >
+          (
+        </span>
+        <span
+          className="sc-AykKI iwVWIw"
+        >
+          true
+        </span>
+        <span
+          className="sc-AykKH bhSCBp"
+        >
+          )
+        </span>
+        <span
+          className="sc-AykKJ cteSdM"
+        >
+          {
+        </span>
+         
+        <span
+          className="sc-AykKK gtdKVi"
+        >
+          loveToCode
+        </span>
+        <span
+          className="sc-AykKH bhSCBp"
+        >
+          (
+        </span>
+        <span
+          className="sc-AykKH bhSCBp"
+        >
+          )
+        </span>
+        <span
+          className="sc-AykKJ cteSdM"
+        >
+          ;
+        </span>
+         
+        <span
+          className="sc-AykKJ cteSdM"
+        >
+          }
+        </span>
+      </pre>
+    </div>
+    <div
+      className="sc-fzXfLP cKvoPT"
+    >
+      © 
+      2020
+      , Built with
+       
+      <a
+        href="https://www.gatsbyjs.org"
+      >
+        Gatsby
+      </a>
+       
+      and ♥
+    </div>
+  </footer>,
+]
+`;

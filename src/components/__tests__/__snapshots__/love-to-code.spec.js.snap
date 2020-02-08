@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing the LoveToCode renders correctly 1`] = `
+<div
+  className="sc-AykKH igdBGH"
+>
+  <pre>
+    <span
+      className="sc-AykKC juMySS"
+    >
+      if
+    </span>
+    <span
+      className="sc-AykKD eICLKN"
+    >
+      (
+    </span>
+    <span
+      className="sc-AykKE IkwsY"
+    >
+      true
+    </span>
+    <span
+      className="sc-AykKD eICLKN"
+    >
+      )
+    </span>
+    <span
+      className="sc-AykKF fTPbnk"
+    >
+      {
+    </span>
+     
+    <span
+      className="sc-AykKG jTNUeG"
+    >
+      loveToCode
+    </span>
+    <span
+      className="sc-AykKD eICLKN"
+    >
+      (
+    </span>
+    <span
+      className="sc-AykKD eICLKN"
+    >
+      )
+    </span>
+    <span
+      className="sc-AykKF fTPbnk"
+    >
+      ;
+    </span>
+     
+    <span
+      className="sc-AykKF fTPbnk"
+    >
+      }
+    </span>
+  </pre>
+</div>
+`;
