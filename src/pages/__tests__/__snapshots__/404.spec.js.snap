@@ -36,10 +36,14 @@ Array [
   <main
     className="sc-fzXfLR bMWpZY"
   >
-    <h1>
+    <h1
+      className="sc-fzXfLS jahFoT"
+    >
       Não encontrado
     </h1>
-    <p>
+    <p
+      className="sc-fzXfLT fwtdCd"
+    >
       Hmmm... Acho que você não deveria estar aqui.
     </p>
   </main>,
