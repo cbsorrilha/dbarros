@@ -29,6 +29,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.7",
+    "husky": "^4.2.1",
     "prismjs": "^1.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -57,6 +58,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
   },
   "scripts": {
     "build": "gatsby build",
