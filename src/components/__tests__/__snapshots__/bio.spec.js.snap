@@ -1,12 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bio renders correctly 1`] = `
+exports[`Snapshot testing the Bio renders correctly 1`] = `
 <div
-  style={
-    Object {
-      "display": "flex",
-      "marginBottom": "4.375rem",
-    }
-  }
-/>
+  className="sc-AykKC gPOpzA"
+>
+  <div
+    className="sc-AykKD jPscvs"
+  >
+    <h2>
+      Olá, eu sou o Cesar
+    </h2>
+    <p>
+      Sou desenvolvedor web desde 2013 e meu sonho é transformar a Baixada Fluminense (RJ) no novo Vale do Silício™.
+    </p>
+    <p>
+      Desenvolvo no back-end com NodeJS e um pouquinho de Python, no front-end com React, Vue e o que mais vier e sei até um pouquinho de infra com docker e kubernetes.
+    </p>
+    <p>
+      Também me meto escrever na internet.
+    </p>
+    <p>
+      Quer saber mais? Fala comigo.
+    </p>
+    <div
+      className="sc-AykKE dnwoWY"
+    >
+      <div
+        className="sc-AykKF GwDrs"
+      >
+        <a
+          href="a"
+        >
+          <test-file-stub
+            style={
+              Object {
+                "color": "#2cb67d",
+              }
+            }
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <img
+    alt="Eu"
+    src="img"
+    title="Eu sou o da direita"
+  />
+</div>
 `;

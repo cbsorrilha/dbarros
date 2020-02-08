@@ -3,23 +3,33 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styled from "styled-components"
+import { rhythm } from "../utils/typography"
 
-class NotFoundPage extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+const NotFoundTitle = styled.h1`
+  grid-column: 2 / 14;
+  text-align: center;
+  font-size: ${rhythm(1.5)};
+`;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
+const NotFoundParagraph = styled.p`
+  grid-column: 2 / 14;
+  text-align: center;
+  font-size: ${rhythm(.75)};
+`;
+
+export default function NotFoundPage({ data, location }) {
+  const siteTitle = data.site.siteMetadata.title;
+
+  return (
+    <Layout location={location} title={siteTitle}>
         <SEO title="404: Not Found" />
-        <h1>Not Found</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </Layout>
-    )
-  }
+        <NotFoundTitle>Não encontrado</NotFoundTitle>
+        <NotFoundParagraph>Hmmm... Acho que você não deveria estar aqui.</NotFoundParagraph>
+    </Layout>
+  )
 }
 
-export default NotFoundPage
 
 export const pageQuery = graphql`
   query {

@@ -56,7 +56,7 @@ E o about.html
 
 Daí você vai até sua pastinha, clica duas vezes no arquivo index.html e:
 
-![Ohh não, um temido erro de CORS](./ajax-error.png)
+![Ohh não, um temido erro de CORS](../../assets/ajax-error.png)
 
 ## E agora, José?
 

@@ -2,10 +2,23 @@ module.exports = {
   siteMetadata: {
     title: `dbarros`,
     author: `Cesar de Barros`,
-    description: `if(true) { love(); };`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `if(true) { loveToCode(); };`,
+    siteUrl: `https://dbarros.dev/`,
+    profilePic:
+      "https://lh3.googleusercontent.com/Hlbsre19I9mKsGY-P7YHfXxFMP9wJG3ItaN6zM7Mn9oZga6ZP0kPbrlEnZ31KE6mZpepEbKan7NsrXUoiZYlbMxd7sEo7BdVJoDJfL5jJPRcrLzAC3AyV5GOwl0zE3CRK_RlmL0rtUL7dDXWt2wLAH0gqu9XwFEpAQT0s9Tq28lJZRoadG4PABDrHtrNw8oyVW_d0-rFuX9HIKTR7GPty6Ssmx6IOaWmiMRznSpsXWvG-oJiQtvKxpIW2BaV5a4C5C_PasR4ZmIroKiBWNFgcUyU-DHmGZPtVQZ4D3Y31Wwced78ekEorSbvlYq5OQDdI3UEvpxiidI4J-3SpTKYOgnnA42PvzQN2AiWI4JdilzFcHR5bP45i7X176riGxvMKSZTtMKwLRvnlFFG35ZvubN3DSZaO4MzOh5kUHAfHS4mEQvIkEXPtZXqu_UiZ6FfBdHPdOYdWXh4Yolb-CWII5Ssl1RG9BajDk5gAmPhMJXhqc7tQ8y_2hLDB2_w51M3bSalB9lBSt8nAt3molGoBdx6EV4q9wc0eeK1MipBtIRCXACFFe3EeRDj6SJoJ0wIHHzcP6EXQzFgWY1IzRVi3OuRWxatbWbsjdduJEV-QfYYqXUyXaKlcPjTxF3hhNM00uQe5GJ36LieJ-J0y2uAMy4I8TVj6pSDDQlLgeu59VM1LcdDloq3fY0=w822-h669-no",
     social: {
-      github: `cbsorrilha`,
+      github: {
+        username: `cbsorrilha`,
+        link: `https://github.com/cbsorrilha`,
+      },
+      instagram: {
+        username: `cbsorrilha`,
+        link: `https://www.instagram.com/cbsorrilha/`,
+      },
+      linkedin: {
+        username: `cbsorrilha`,
+        link: `https://www.linkedin.com/in/cbsorrilha/`,
+      },
     },
   },
   plugins: [
@@ -60,10 +73,10 @@ module.exports = {
         name: `dbarros.dev`,
         short_name: `dbarros`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#333`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        background_color: `#333`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `content/assets/logo.svg`,
       },
     },
     `gatsby-plugin-offline`,
@@ -79,10 +92,19 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-prismjs`
-          }
-        ]
-      }
-    }
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 }

@@ -23,5 +23,12 @@ module.exports = {
         })
     ),
     StaticQuery: jest.fn(),
-    useStaticQuery: jest.fn(),
+    useStaticQuery: jest.fn(() => ({
+        site: {
+            siteMetadata: {
+                description: 'zimbabwe',
+                title: 'bozzonga',
+            },
+        }
+    })),
 }
