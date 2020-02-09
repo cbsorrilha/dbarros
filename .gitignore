@@ -69,3 +69,6 @@ yarn-error.log
 .yarn-integrity
 # Firebase cache
 .firebase
+
+# gatsby config
+gatsby-config.js
