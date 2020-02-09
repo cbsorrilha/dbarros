@@ -1,6 +1,7 @@
-import React from "react"
+import React, {useEffect, useContext} from "react"
 import { Link, graphql } from "gatsby"
 import styled, { css } from "styled-components"
+import { FirebaseContext } from "gatsby-plugin-firebase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -63,6 +64,19 @@ export default function BlogPostTemplate({
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  const firebase = useContext(FirebaseContext)
+
+  useEffect(() => {
+    if (!firebase) {
+      console.error('firebase not found')
+      return
+    }
+    
+    firebase
+      .analytics()
+      .logEvent(`visited_${post.frontmatter.title}`)
+  }, [firebase])
 
   return (
     <Layout location={ location } title={siteTitle}>
