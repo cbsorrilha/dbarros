@@ -7,5 +7,3 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Usando [gatsby](https://www.gatsbyjs.org/) & markdown para publicar conteúdo questionável na internet.
-
-Testing Travis
