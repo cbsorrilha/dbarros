@@ -8,9 +8,9 @@ before_script:
 
 before_deploy:
 - npm install
+- node firebase-build.js
 - npm run build
 - ls -a
-- node firebase-build.js
 
 branches:
     only:
