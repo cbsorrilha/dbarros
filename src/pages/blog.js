@@ -1,16 +1,28 @@
-import React from "react"
+import React, { useEffect, useContext } from "react"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogShelf from '../components/blog-shelf';
 import PageTitle from '../components/page-title';
 import BlogPost from '../components/blog-post';
 import placeholderImage from '../../content/assets/placeholder.png';
+import { FirebaseContext } from "gatsby-plugin-firebase"
 
 export default function Blog({ data, location }) {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const firebase = useContext(FirebaseContext)
+
+  useEffect(() => {
+    if (!firebase) {
+      console.error('firebase not found')
+      return
+    }
+    
+    firebase
+      .analytics()
+      .logEvent("visited_blog")
+  }, [firebase])
 
   return (
     <Layout location={location} title={siteTitle}>

@@ -10,9 +10,10 @@ before_deploy:
 - npm install
 - npm run build
 - ls -a
+- node firebase-build.js
 
-branches:	
-    only:	
+branches:
+    only:
     - master
 
 deploy:

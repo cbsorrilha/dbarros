@@ -1,10 +1,11 @@
-import React from "react"
+import React, {useContext, useEffect} from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { rhythm } from "../utils/typography"
+import { FirebaseContext } from "gatsby-plugin-firebase"
 
 const NotFoundTitle = styled.h1`
   grid-column: 2 / 14;
@@ -20,6 +21,19 @@ const NotFoundParagraph = styled.p`
 
 export default function NotFoundPage({ data, location }) {
   const siteTitle = data.site.siteMetadata.title;
+  const firebase = useContext(FirebaseContext)
+
+  useEffect(() => {
+    if (!firebase) {
+      console.error('firebase not found')
+      return
+    }
+    
+    firebase
+      .analytics()
+      .logEvent("visited_404")
+  }, [firebase])
+
 
   return (
     <Layout location={location} title={siteTitle}>
