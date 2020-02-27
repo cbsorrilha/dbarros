@@ -13,8 +13,6 @@ const envs = [
 
 const data = fs.readFileSync("gatsby-config.deploy.js", "utf-8")
 const newValue = envs.reduce((acc, env) => {
-  console.log("env", env)
-  console.log("value", process.env[env])
   const find = new RegExp(`{{${env}}}`, "g")
   acc = acc.replace(find, process.env[env])
   return acc

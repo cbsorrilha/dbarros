@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from "react"
+import React, { useEffect, useContext } from "react"
 import { Link, graphql } from "gatsby"
 import styled, { css } from "styled-components"
 import { FirebaseContext } from "gatsby-plugin-firebase"
@@ -10,13 +10,13 @@ import media from "../utils/media"
 
 const Article = styled.article`
   grid-column: 2 / 14;
-  
+
   section p {
-    color: #94A1B2;
-    font-size: ${rhythm(.666)};
+    color: #94a1b2;
+    font-size: ${rhythm(0.666)};
   }
   a {
-    color: #2CB67D;
+    color: #2cb67d;
   }
   a:hover {
     text-decoration: underline;
@@ -35,7 +35,7 @@ const Article = styled.article`
       font-size: 1.8rem;
     }
   `)}
-`;
+`
 
 const Nav = styled.nav`
   grid-column: 2 / 14;
@@ -46,21 +46,18 @@ const Nav = styled.nav`
     list-style: none;
     padding: 0;
   }
-`;
+`
 
 const Date = styled.p`
   display: block;
   margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(.35)};
-  color: #2CB67D;
+  margin-top: ${rhythm(0.35)};
+  color: #2cb67d;
   font-weight: bold;
-  font-size: ${rhythm(.5)};
-`;
+  font-size: ${rhythm(0.5)};
+`
 
-export default function BlogPostTemplate({
-  data, pageContext, location
-}) {
-
+export default function BlogPostTemplate({ data, pageContext, location }) {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -69,29 +66,23 @@ export default function BlogPostTemplate({
 
   useEffect(() => {
     if (!firebase) {
-      console.error('firebase not found')
+      console.error("firebase not found")
       return
     }
-    
-    firebase
-      .analytics()
-      .logEvent(`visited_${post.frontmatter.title}`)
+
+    firebase.analytics().logEvent(`visited_${post.frontmatter.title}`)
   }, [firebase])
 
   return (
-    <Layout location={ location } title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <Article>
         <header>
-          <h1>
-            {post.frontmatter.title}
-          </h1>
-          <Date>
-            {post.frontmatter.date}
-          </Date>
+          <h1>{post.frontmatter.title}</h1>
+          <Date>{post.frontmatter.date}</Date>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
@@ -132,7 +123,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM DD, YYYY", locale: "pt-BR")
         description
       }
     }
