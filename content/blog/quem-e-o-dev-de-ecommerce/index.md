@@ -31,7 +31,7 @@ _Você nunca vai ficar sem ter o que fazer._ As demandas são imensas. Tem sempr
 
 _Inovação e boas idéias são valorizadas._ O ecommerce é um segmento extremamente saturado. Com os players competindo agressivamente uns com os outros por 1 décimo a mais de conversão no analytics. Por isso aquele que consegue implementar uma feature inovadora, uma mudança de fluxo que facilita a compra ou qualquer coisa do tipo, brilha.
 
-_O aprendizado rola solto._ Como tem sempre muito o que fazer e inovação é um tópico muito quente, você vai estar sempre entrando em contato com coisas novas e vai pode encontrar maneiras criativas de resolver problemas de maneira mais fácil/rápida. Sempre focado no usuário.
+_O aprendizado rola solto._ Como tem sempre muito o que fazer e inovação é um tópico muito quente, você vai estar sempre entrando em contato com coisas novas e vai poder encontrar maneiras criativas de resolver problemas de maneira mais fácil/rápida. Sempre focado no usuário.
 
 ## E as coisas ruins?
 
