@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Snapshot testing the Main renders correctly 1`] = `
-<main
-  className="sc-AykKC kpdnlP"
-/>
-`;

@@ -1,0 +1,95 @@
+The Apache Software Foundation uses various licenses to distribute software and documentation, to accept regular contributions from individuals and corporations, and to accept larger grants of existing software products.
+
+These licenses help us achieve our goal of providing reliable and long-lived software products through collaborative open source software development. In all cases, contributors retain full rights to use their original contributions for any other purpose outside of Apache while providing the ASF and its projects the right to distribute and build upon their work within Apache.
+
+LICENSING OF DISTRIBUTIONS
+All software produced by The Apache Software Foundation or any of its projects or subjects is licensed according to the terms of the documents listed below.
+
+APACHE LICENSE, VERSION 2.0 (CURRENT)
+http://www.apache.org/licenses/LICENSE-2.0 ( TXT or HTML )
+
+The 2.0 version of the Apache License was approved by the ASF in 2004. The goals of this license revision have been to reduce the number of frequently asked questions, to allow the license to be reusable without modification by any project (including non-ASF projects), to allow the license to be included by reference instead of listed in every file, to clarify the license on submission of contributions, to require a patent license on contributions that necessarily infringe the contributor's own patents, and to move comments regarding Apache and other inherited attribution notices to a location outside the license terms (the NOTICE file ).
+
+The result is a license that is supposed to be compatible with other open source licenses, while remaining true to the original goals of the Apache Group and supportive of collaborative development across both nonprofit and commercial organizations. The Apache Software Foundation is still trying to determine if this version of the Apache License is compatible with the GPL.
+
+All packages produced by the ASF are implicitly licensed under the Apache License, Version 2.0, unless otherwise explicitly stated. More developer documentation on how to apply the Apache License to your work can be found in * Applying the Apache License, Version 2.0 *.
+
+APACHE LICENSE, VERSION 1.1 (HISTORIC)
+http://www.apache.org/licenses/LICENSE-1.1
+
+The 1.1 version of the Apache License was approved by the ASF in 2000. The primary change from the 1.0 license is in the 'advertising clause' (section 3 of the 1.0 license); derived products are no longer required to include attribution in their advertising materials, only in their documentation.
+
+Individual packages licensed under the 1.1 version may have used different wording due to varying requirements for attribution or mark identification, but the binding terms were all the same.
+
+APACHE LICENSE, VERSION 1.0 (HISTORIC)
+http://www.apache.org/licenses/LICENSE-1.0
+
+This is the original Apache License which applies only to older versions of Apache packages (such as version 1.2 of the Web server).
+
+CONTRIBUTOR LICENSE AGREEMENTS
+The ASF desires that all contributors of ideas, code, or documentation to any Apache projects complete, sign, and submit via email an Individual Contributor License Agreement (ICLA).
+
+The purpose of this agreement is to clearly define the terms under which intellectual property has been contributed to the ASF and thereby allow us to defend the project should there be a legal dispute regarding the software at some future time. A signed ICLA is required to be on file before an individual is given commit rights to any ASF project.
+
+For a corporation that has assigned employees to work on an Apache project, a Corporate CLA (CCLA) is available for contributing intellectual property via the corporation, that may have been assigned as part of an employment agreement.
+
+Note that a Corporate CLA does not remove the need for every developer to sign their own ICLA as an individual, which covers both contributions which are owned and those that are not owned by the corporation signing the CCLA.
+
+The CCLA legally binds the corporation, so it must be signed by a person with authority to enter into legal contracts on behalf of the corporation.
+
+The ICLA is not tied to any employer you may have, so it is recommended to use one's personal email address in the contact details, rather than an @work address.
+
+Your Full name will be published unless you provide an alternative Public name. For example if your full name is Andrew Bernard Charles Dickens, but you wish to be known as Andrew Dickens, please enter the latter as your Public name.
+
+The email address and other contact details are not published.
+
+If you are submitting an ICLA in response to an invitation from a PMC, be sure to identify the project via the form field "notify project". Also, choose a preferred id that is not already in use. Apache ids must start with an alphabetic character and contain at least two additional alphanumeric characters (no special characters). You can check for ids in use here.
+
+SOFTWARE GRANTS
+When an individual or corporation decides to donate a body of existing software or documentation to one of the Apache projects, they need to execute a formal Software Grant Agreement (SGA) with the ASF. Typically, this is done after negotiating approval with the ASF Incubator or one of the PMCs, since the ASF will not accept software unless there is a viable community available to support a collaborative project.
+
+SUBMITTING LICENSE AGREEMENTS AND GRANTS
+Documents may be submitted by email and signed by hand or by electronic signature. Postal mail hard copy and fax are no longer supported.
+
+When submitting by email, please fill the form with a pdf viewer, then print, sign, scan all pages into a single pdf file, and attach the pdf file to an email to secretary@apache.org.
+
+If possible, send the attachment from the email address in the document. Please send only one document per email.
+
+If you prefer to sign electronically, please fill the form, save it locally (e.g. icla.pdf), and sign the file by preparing a detached PGP signature. For example,
+
+gpg --armor --detach-sign icla.pdf
+
+The above will create a file icla.pdf.asc. Send both the file (icla.pdf) and signature (icla.pdf.asc) as attachments in the same email to secretary@apache.org. Please send only one document (file plus signature) per email. Please do not submit your public key to Apache. Instead, please upload your public key to pgpkeys.mit.edu.
+
+The files should be named icla.pdf and icla.pdf.asc for individual agreements; ccla.pdf and ccla.pdf.asc for corporate agreements; software-grant.pdf and software-grant.pdf.asc for grants.
+
+We do not accept Zip files or other archives.
+
+Please note that typing your name in the field at the bottom of the document is not signing, regardless of the font that is used. Signing is either writing your signature by hand on a printed copy of the document, or digitally signing via gpg. Unsigned documents will not be accepted.
+
+From wikipedia.org: A signature is a handwritten (and often stylized) depiction of someone's name or nickname, on documents as a proof of identity and intent.
+
+PROVENANCE
+Source code (including machine-readable documentation, release notes, guides, test cases, run books, and scripts) in Apache repositories falls into three classifications (solely for the purpose of this discussion):
+
+CODE DEVELOPED AT APACHE UNDER APACHE GOVERNANCE, LICENSED TO APACHE BY ITS DEVELOPERS UNDER A CONTRIBUTOR LICENSE AGREEMENT, DISTRIBUTED BY APACHE, AND LICENSED TO DOWNSTREAM USERS UNDER THE APACHE LICENSE
+This represents most code at Apache. The code contains a standard Apache license header which refers to the standard Apache license in the distribution.
+
+CODE DEVELOPED ELSEWHERE, LICENSED TO APACHE UNDER A SOFTWARE GRANT AGREEMENT, INCORPORATED INTO APACHE PROJECTS, DISTRIBUTED BY APACHE, AND LICENSED TO DOWNSTREAM USERS UNDER THE APACHE LICENSE
+This is code that is being brought into Apache for future development as part of an Apache project. The headers on all files are changed to the standard Apache header. Most incubator projects start as externally-developed code and the Intellectual Property Clearance process is done as part of incubation.
+
+Code that is originally developed elsewhere and is being brought into Apache for future development as part of an existing project must have the Intellectual Property Clearance process done explicitly by the PMC of the receiving project, under the auspices of the Incubator PMC which must approve the process.
+
+CODE DEVELOPED ELSEWHERE, RECEIVED UNDER A CATEGORY A LICENSE, INCORPORATED INTO APACHE PROJECTS, DISTRIBUTED BY APACHE, AND LICENSED TO DOWNSTREAM USERS UNDER ITS ORIGINAL LICENSE
+This code retains its external identity and is being incorporated into an Apache project for convenience, to avoid referencing an external repository whose contents are not under control of the project. The code retains its original license; and distribution as part of the Apache project explicitly calls out the license. The code retains its original header which refers to its own license in the distribution. If changes are made to the code while at Apache, the standard Apache header is prepended to each changed file. Additionally, any legally-required notices related to the code are published in the distribution.
+
+EXPORT RESTRICTIONS
+For export restriction information, please consult our ASF Export Classifications page.
+
+TRADEMARK AND LOGO USAGE
+For ASF trademark and logo usage information, please consult our ASF Trademark Use Policy page.
+
+QUESTIONS?
+For answers to frequently asked licensing questions, please consult our Licensing Frequently Asked Questions page.
+
+Source: http://www.apache.org/licenses/
